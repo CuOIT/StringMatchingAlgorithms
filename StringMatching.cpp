@@ -26,6 +26,7 @@ int main() {
     getFile();
 
 	do{
+		fflush(stdin);
         int fileChoose=0;
         int aChoose=0;
         string text,pat;
@@ -80,3 +81,4 @@ int main() {
 
     return 0;
 }
+
