@@ -9,15 +9,12 @@ string text1,text2,text3;
     ifstream file1("alice.txt");
     string t1((istreambuf_iterator<char>(file1)),(istreambuf_iterator<char>()));
     text1=t1;
-    cout<<t1.length()<<endl;
     ifstream file2("ADN_gens.txt");
     string t2((istreambuf_iterator<char>(file2)),(istreambuf_iterator<char>()));
     text2=t2;
-    cout<<t2.length()<<endl;
     ifstream file3("Duplicated_Alphabet.txt");
     string t3((istreambuf_iterator<char>(file3)),(istreambuf_iterator<char>()));
     text3=t3;
-    cout<<t3.length()<<endl;
 }
 using namespace std;
 
@@ -50,6 +47,7 @@ int main() {
 			text=text3;
 		}
 		fflush(stdin);
+		cout<<endl<<"-------------------------------------------"<<endl<<endl;
 		cout<<"Input the pattern to find:";getline(cin,pat);
 		cout<<endl<<"Choose algorithms:"<<endl;
 		cout<<"1. KMP Algorithm"<<endl;
@@ -68,6 +66,7 @@ int main() {
 			indices=RabinKarpSearch(text,pat);
 		}
 		string yes;
+		cout<<endl<<"-------------------------------------------"<<endl<<endl;
 		cout<<"Do you want to show the result(type y):";cin>>yes;
 		if(yes=="y")		
         for(int i=0;i<text.length();i++)
